@@ -7,8 +7,8 @@ class Intro(Scene):
         )
         introtitle = TextMobject("Introducci\\'on")
         subt1 = TextMobject("Creaci\\'on del c\\'alculo lambda")
-        subt2 = TextMobject("Qu\\'e es el c\\'alculo lambda")
-        subt3 = TextMobject("Por qu\\'e el uso del c\\'alculo lambda")
+        subt2 = TextMobject("¿Qu\\'e es el c\\'alculo lambda?")
+        subt3 = TextMobject("¿Por qu\\'e el uso del c\\'alculo lambda?")
 
         introtitle.scale(2)
         tittle.scale(3)
