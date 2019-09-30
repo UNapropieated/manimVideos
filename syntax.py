@@ -85,7 +85,8 @@ class Syntax (Scene):
 		self.play(FadeOut(title),
 			FadeOut(t2))
 
-		#PARTE 3: En cálculo lambda
+		#PARTE 3: Elementos sintácticos del cálculo lambda
+		#elementos a imprimir
 		t13 = TextMobject(r"$f(x) = x^{2}$")
 		t14 = TextMobject(r"Una variable.")
 		t15 = TextMobject(r"Una abstracci\'on funcional.")
@@ -93,15 +94,23 @@ class Syntax (Scene):
 		t17 = TextMobject(r"$x$")
 		t18 = TextMobject(r"${\lambda}x$. $x^{2}$")
 		t19 = TextMobject(r"($x$ $x$)")
+		t20 = TextMobject(r"\small{¿C\'omo expreso $f(x) = x^{2}$ usando el c\'alculo $\lambda$?}")
 
 		#Posisionamiento y color
 		t13.to_edge(UP)
-		t14.move_to(np.array([2,2,0]))
+		t14.move_to(np.array([1,2,0]))
+		t14.set_color("#5E9732")
 		t15.next_to(t14,DOWN, buff=0.4)
+		t15.set_color("#80C54C")
 		t16.next_to(t15,DOWN, buff=0.4)
-		t17.move_to(np.array([-2,2,0]))
+		t16.set_color("#9EE865")
+		t17.move_to(np.array([-3,2,0]))
+		t17.set_color("#5E9732")
 		t18.next_to(t17,DOWN, buff=0.4)
+		t18.set_color("#80C54C")
 		t19.next_to(t18,DOWN, buff=0.4)
+		t19.set_color("#9EE865")
+		t20.to_edge(DOWN)
 
 		#Animación
 		self.play(Transform(t5,t13))
@@ -114,3 +123,23 @@ class Syntax (Scene):
 		self.play(Write(t16),
 			Write(t19))
 		self.wait()
+		self.play(Write(t20))
+		self.play(FadeOut(t14),
+			FadeOut(t15),
+			FadeOut(t16),
+			FadeOut(t17),
+			FadeOut(t18),
+			FadeOut(t19))
+
+		#PARTE 4: Definición de f(x) = x²
+		#4.1 Elementos a imprimir
+		t21 = TextMobject(r"\small{Variable}")
+		t22 = TextMobject(r"\small{Operador $\lambda$}")
+		t23 = TextMobject(r"\small{Salida}")
+
+		#Posicionamiento y colores
+		t21.move_to(np.array([-3,2,0]))
+		t22.next_to(t21,DOWN, buff=0.4)
+		t23.next_to(t22,DOWN, buff=0.4)
+
+		#Animación
