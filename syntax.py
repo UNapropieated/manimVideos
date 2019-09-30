@@ -142,20 +142,17 @@ class Syntax (Scene):
 		t27 = TextMobject(r"\large{$f(2) = 2^{2} = 4$}")
 
 		#Posicionamiento y colores
-		"""t21.move_to(np.array([-3,2,0]))
-		t22.next_to(t21,DOWN, buff=0.3)
-		t23.next_to(t22,DOWN, buff=0.3)"""
-		t23.to_edge(LEFT)
-		t22.next_to(t23,UP, buff = 0.3)
-		t21.next_to(t22,UP, buff = 0.3)
+		t21.next_to(t1,DOWN,buff = 0.4)
+		t22.next_to(t1,DOWN,buff = 0.4)
+		t23.next_to(t1,DOWN,buff = 0.4)
 
 		#Animación
 		self.play(Write(t21))
 		self.play(Write(t24))
 		self.wait()
-		self.play(Write(t22))
+		self.play(Transform(t21,t22))
 		self.play(Transform(t24,t25))
 		self.wait()
-		self.play(Write(t23))
+		self.play(Transform(t21,t23))
 		self.play(Transform(t24,t26))
 		self.wait()
